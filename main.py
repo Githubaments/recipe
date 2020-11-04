@@ -245,7 +245,7 @@ if radio == 'Search by recipe name':
     user_text = st.text_input('Recipe Search', value='', max_chars=None, key=None, type='default')
     if len(user_text) != 0:
         recipes = name_search(user_text)
-        get_meals(recipes,filter_cat)
+        get_meals(recipes,filter_cat,filter_area)
 
 elif radio == 'Search by ingredients':
     user_choice = st.multiselect('Choose your ingredients:', ingredients, [])
