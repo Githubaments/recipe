@@ -43,10 +43,10 @@ def get_meals(recipes,filter_cat,filter_area):
         f_recipes = f"https://www.themealdb.com/api/json/v2/{api}/lookup.php?i=" + item
         r_recipes = json.loads(requests.get(f_recipes).text)
 
-        st.image(r_recipes['meals'][0]['strMealThumb'])
+        st.image(r_recipes['meals'][0]['strMealThumb'],use_column_width=True)
         st.subheader(r_recipes['meals'][0]['strMeal'])
 
-        for item in (range(1, 15)):
+        for item in (range(1, 15)): 
             a = 'strMeasure' + str(item)
             b = 'strIngredient' + str(item)
             a = r_recipes['meals'][0][a]
