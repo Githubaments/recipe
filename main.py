@@ -4,7 +4,7 @@ import requests
 import os
 
 api = (os.environ.get('api_key'))
-st.set_page_config(page_title='Recipe Recommender')
+st.set_page_config(page_title='Recipe Recommender', page_icon="https://raw.githubusercontent.com/Githubaments/Images/main/favicon.ico")
 
 
 
